@@ -1,0 +1,25 @@
+{
+  "name": "pdfextractor",
+  "version": "1.0.0",
+  "description": "Extract Tables from Financial Statement PDFs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --trace-warnings src/serverV1.js"
+  },
+  "author": "Dave J. Schoepel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.1.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.6.9",
+    "pdf.js-extract": "^0.2.1",
+    "yahoo-finance2": "^2.4.1"
+  }
+}
