@@ -107,4 +107,4 @@ dist
 .env
 
 # ignore test pdfs in the src folder
-/src/v1/pdfs/
+/src/v1/pdfs/*.*
