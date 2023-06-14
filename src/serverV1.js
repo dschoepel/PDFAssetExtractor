@@ -43,7 +43,10 @@ app.use("/api/v1/file", v1FileRouter);
 
 // default route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/v1/public/index.html"));
+  // res.sendFile(path.join(__dirname + "/v1/public/index.html"));
+  res.json({
+    message: "Welcome to the PDFAssetExtractor API.",
+  });
 });
 
 app.listen(PORT, () => {
