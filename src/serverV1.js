@@ -13,7 +13,7 @@ const PORT = process.env.API_PORT || 5005;
 global.__basedir = __dirname;
 
 app.use(helmet());
-app.use(bodyParser.json({ limit: "5000kb" }));
+app.use(bodyParser.json({ limit: "5mb" }));
 
 app.use(cors());
 app.use(express.json());
