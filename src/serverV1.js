@@ -13,8 +13,8 @@ const PORT = process.env.API_PORT || 5005;
 global.__basedir = __dirname;
 
 app.use(helmet());
-app.use(bodyParser.json({ limit: "10mb" }));
-app.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
+// app.use(bodyParser.json({ limit: "10mb" }));
+// app.use(bodyParser.urlencoded({ extended: true, limit: "10mb" }));
 
 app.use(cors());
 // app.use(express.json({ limit: "10mb" }));
