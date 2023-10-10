@@ -10,6 +10,7 @@ const directoryPath = path.join(__dirname, "../", "/pdfs");
 const baseUrl = "pdfs/";
 
 const extractPdfDetails = async (req, res) => {
+  console.log("Starting extractPdfDetails...", req.file);
   const fileName = req.params.filename;
   console.log(`Starting extractPdfDetails... for ${fileName}`);
   const filePathToPDF = path.join(directoryPath, "/", fileName);
