@@ -3,7 +3,16 @@ const path = require("path");
 const multer = require("multer");
 const maxSize = 10 * 1024 * 1024;
 
-let storage = multer.memoryStorage();
+// let storage = multer.memoryStorage();
+
+let storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, path.join(__dirname, "../", "/pdfs"));
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
 
 const fileFilter = (req, file, cb) => {
   if (file.mimetype.includes("pdf")) {

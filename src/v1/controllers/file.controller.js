@@ -10,9 +10,9 @@ const directoryPath = path.join(__dirname, "../", "/pdfs");
 const baseUrl = "pdfs/";
 
 const extractPdfDetails = async (req, res) => {
-  // const fileName = req.params.filename;
-  // console.log(`Starting extractPdfDetails... for ${fileName}`);
-  // const filePathToPDF = path.join(directoryPath, "/", fileName);
+  const fileName = req.params.filename;
+  console.log(`Starting extractPdfDetails... for ${fileName}`);
+  const filePathToPDF = path.join(directoryPath, "/", fileName);
   // Get pdf file to parse
   try {
     await uploadFile(req, res);
@@ -28,7 +28,7 @@ const extractPdfDetails = async (req, res) => {
     let pdfExtractDetails = await pdfServices
       .extractPDFInfo(req.file.buffer)
       .then((response) => {
-        // console.log(`extractPdfDetails for ${filePathToPDF} is: `, response);
+        console.log(`extractPdfDetails for ${filePathToPDF} is: `, response);
         return response;
       })
       .catch((error) => {
